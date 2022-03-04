@@ -1,0 +1,14 @@
+<h3> Discentes </h3>
+
+<p-table [value]="discentes" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nome</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-discente>
+        <tr>
+            <td>{{discente.nome}}</td>
+        </tr>
+    </ng-template>
+</p-table>

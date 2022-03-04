@@ -1,4 +1,4 @@
-import { Periodo } from './periodo';
+import { Periodo } from '../models/periodo';
 
 describe('Periodo', () => {
   it('should create an instance', () => {

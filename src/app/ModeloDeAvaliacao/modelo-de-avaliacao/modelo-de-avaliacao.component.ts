@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ModeloDeAvaliacao } from '../modelo-de-avaliacao';
+import { Router } from '@angular/router';
+import { ModeloDeAvaliacao } from '../../models/modelo-de-avaliacao';
 
 @Component({
   selector: 'app-modelo-de-avaliacao',
@@ -10,7 +11,7 @@ export class ModeloDeAvaliacaoComponent implements OnInit {
 
   modelos: ModeloDeAvaliacao[];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.modelos = [{
@@ -41,6 +42,13 @@ export class ModeloDeAvaliacaoComponent implements OnInit {
       ];
   }
 
-  
+
+  listarPeriodos(id: number){
+    this.router.navigate(['periodos-listar', id]);
+  }  
+
+  listarDiscentes(){
+    this.router.navigate(['discente-listar']);
+  }
 
 }

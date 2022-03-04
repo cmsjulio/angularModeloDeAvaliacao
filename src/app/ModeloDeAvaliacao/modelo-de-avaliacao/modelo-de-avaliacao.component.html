@@ -1,4 +1,4 @@
-<h2> Modelos de Avaliação </h2>
+<h3> Modelos de Avaliação </h3>
 
 <p-table [value]="modelos" responsiveLayout="scroll">
     <ng-template pTemplate="header">
@@ -14,7 +14,12 @@
             <td>{{modelo.nome}}</td>
             <td>{{modelo.sigla}}</td>
             <td>{{modelo.descricao}}</td>
-            <td>{{modelo.periodos}}</td>
+            <td>                 
+                <button pTooltip="Detalhar" pButton icon="pi pi-info-circle"
+                                    (click) = "listarPeriodos(modelo.id)"
+                                    class="p-button-raised p-button-text primary p-mr-2">
+                </button>
+            </td>
         </tr>
     </ng-template>
 </p-table>
